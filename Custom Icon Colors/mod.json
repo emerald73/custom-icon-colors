@@ -88,5 +88,47 @@
 			"description": "Change glow color of player 2"
 		}
 	},
-	"repository": "https://github.com/emerald73/custom-icon-colors"
+	"repository": "https://github.com/emerald73/custom-icon-colors",
+	"incompatibilities": [
+		{
+			"id": "weebify.separate_dual_icons",
+			"version": "*",
+			"importance": "breaking"
+		},
+		{
+			"id": "asaki_zuki.same_dual_color",
+			"version": "*",
+			"importance": "breaking"
+		},
+		{
+			"id": "terma.ambienticons",
+			"version": "*",
+			"importance": "breaking"
+		},
+		{
+			"id": "saumondeluxe.rainbow_icon",
+			"version": "*",
+			"importance": "conflicting"
+		},
+		{
+			"id": "rooot.custom-gamemode-colors",
+			"version": "*",
+			"importance": "breaking"
+		},
+		{
+			"id": "the_bearodactyl.gay-wave-trail",
+			"version": "*",
+			"importance": "breaking"
+		},
+		{
+			"id": "ninkaz.blending_glow",
+			"version": "*",
+			"importance": "breaking"
+		},
+		{
+			"id": "capeling.coloured-wave-trail",
+			"version": "*",
+			"importance": "breaking"
+		}
+	]
 }
