@@ -18,41 +18,62 @@ class $modify(PlayLayer) {
 	void postUpdate(float p0) {
 		PlayLayer::postUpdate(p0);
 
-		bool enablePrimaryColor = Mod::get()->getSettingValue<bool>("enableColor1");
-		bool enableSecondaryColor = Mod::get()->getSettingValue<bool>("enableColor2");
-		bool enableGlow = Mod::get()->getSettingValue<bool>("enableGlow");
+		bool enablePrimaryColorP1 = Mod::get()->getSettingValue<bool>("enablePrimaryColorP1");
+		bool enableSecondaryColorP1 = Mod::get()->getSettingValue<bool>("enableSecondaryColorP1");
+    bool enablePrimaryColorP2 = Mod::get()->getSettingValue<bool>("enablePrimaryColorP2");
+		bool enableSecondaryColorP2 = Mod::get()->getSettingValue<bool>("enableSecondaryColorP2");
+		bool enableGlowP1 = Mod::get()->getSettingValue<bool>("enableGlowP2");
+		bool enableGlowP2 = Mod::get()->getSettingValue<bool>("enableGlowP1");
 		bool enableSameDualColor = Mod::get()->getSettingValue<bool>("sameDualColor");
-		cocos2d::ccColor3B primaryColor = Mod::get()->getSettingValue<cocos2d::ccColor3B>("primaryColor");
-		cocos2d::ccColor3B secondaryColor = Mod::get()->getSettingValue<cocos2d::ccColor3B>("secondaryColor");
-		cocos2d::ccColor3B glowColor = Mod::get()->getSettingValue<cocos2d::ccColor3B>("glowColor");
+		cocos2d::ccColor3B primaryColorP1 = Mod::get()->getSettingValue<cocos2d::ccColor3B>("primaryColorP1");
+		cocos2d::ccColor3B secondaryColorP1 = Mod::get()->getSettingValue<cocos2d::ccColor3B>("secondaryColorP1");
+    cocos2d::ccColor3B primaryColorP2 = Mod::get()->getSettingValue<cocos2d::ccColor3B>("primaryColorP2");
+		cocos2d::ccColor3B secondaryColorP2 = Mod::get()->getSettingValue<cocos2d::ccColor3B>("secondaryColorP2");
+		cocos2d::ccColor3B glowColorP1 = Mod::get()->getSettingValue<cocos2d::ccColor3B>("glowColorP1");
+    cocos2d::ccColor3B glowColorP2 = Mod::get()->getSettingValue<cocos2d::ccColor3B>("glowColorP2");
 
 		if (enableSameDualColor) {
-			if (enablePrimaryColor) {
-				m_player1->setColor(primaryColor);
-				m_player2->setColor(primaryColor);
+			if (enablePrimaryColorP1) {
+				m_player1->setColor(primaryColorP1);
 			}
 
-			if (enableSecondaryColor) {
-				m_player1->setSecondColor(secondaryColor);
-				m_player2->setSecondColor(secondaryColor);
+      if(enablePrimaryColorP2) {
+        m_player2->setColor(primaryColorP2);
+      }
+
+			if (enableSecondaryColorP1) {
+				m_player1->setSecondColor(secondaryColorP1);
 			}
+
+      if (enableSecondaryColorP2) {
+        m_player2->setSecondColor(secondaryColorP2);
+      }
 		} else if (!enableSameDualColor) {
-			if (enablePrimaryColor) {
-				m_player1->setColor(primaryColor);
-				m_player2->setSecondColor(primaryColor);
+			if (enablePrimaryColorP1) {
+				m_player1->setColor(primaryColorP1);
 			}
 
-			if (enableSecondaryColor) {
-				m_player1->setSecondColor(secondaryColor);
-				m_player2->setColor(secondaryColor);
+      if (enablePrimaryColorP2) {
+        m_player2->setSecondColor(primaryColorP2);
+      }
+
+			if (enableSecondaryColorP1) {
+				m_player1->setSecondColor(secondaryColorP1);
 			}
+
+      if (enableSecondaryColorP2) {
+        m_player2->setColor(secondaryColorP2);
+      }
 		}
 
-		if (enableGlow) {
-			m_player1->m_glowColor = glowColor;
-			m_player2->m_glowColor = glowColor;
+		if (enableGlowP1) {
+			m_player1->m_glowColor = glowColorP1;
 			m_player1->updateGlowColor();
-			m_player2->updateGlowColor();
 		}
+
+    if (enableGlowP2) {
+      m_player2->m_glowColor = glowColorP2;
+			m_player2->updateGlowColor();
+    }
 	}
 };
