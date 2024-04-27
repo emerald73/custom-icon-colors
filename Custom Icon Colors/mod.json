@@ -51,5 +51,6 @@
 			"default": "#ffffff",
 			"description": "Change glow color"
 		}
-	}
+	},
+	"repository": "https://github.com/emerald73/custom-icon-colors"
 }
