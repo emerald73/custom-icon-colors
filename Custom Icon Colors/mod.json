@@ -1,0 +1,55 @@
+{
+	"geode": "2.0.0-beta.15",
+	"version": "v1.0.0",
+	"id": "gdemerald.custom_icon_colors",
+	"name": "Custom Icon Colors",
+	"developer": "gdemerald",
+	"description": "Customize your icon colors to any color you want",
+	"gd": {
+		"win": "2.204"
+	},
+	"settings": {
+		"enableColor1": {
+			"name": "Enable Primary Color",
+			"type": "bool",
+			"default": true,
+			"description": "Enable custom primary color"
+		},
+		"enableColor2": {
+			"name": "Enable Secondary Color",
+			"type": "bool",
+			"default": true,
+			"description": "Enable custom secondary color"
+		},
+		"enableGlow": {
+			"name": "Enable Glow Color",
+			"type": "bool",
+			"default": true,
+			"description": "Enable custom glow color"
+		},
+		"sameDualColor": {
+			"name": "Enable Same Dual Color",
+			"type": "bool",
+			"default": true,
+			"description": "Sets your P2 dual color to be the same as your P1 dual color"
+		},
+		"primaryColor": {
+			"name": "Primary Color",
+			"type": "rgb",
+			"default": "#ffffff",
+			"description": "Change primary color"
+		},
+		"secondaryColor": {
+			"name": "Secondary Color",
+			"type": "rgb",
+			"default": "#ffffff",
+			"description": "Change secondary color"
+		},
+		"glowColor": {
+			"name": "Glow Color",
+			"type": "rgb",
+			"default": "#ffffff",
+			"description": "Change glow color"
+		}
+	}
+}
