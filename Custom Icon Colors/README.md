@@ -5,4 +5,4 @@ Turns out QOLMod by TheSillyDoggo already has a similar feature but IDC I still 
 
 Allows you to set your P1 color, P2 color, and glow color to any color you want.
 
-Does NOT work with the "Same Dual Color" mod, but I built it into this one myself.
+Does NOT work with several other mods which modify icon colors, which are listed as incompatibilities in mod.json
